@@ -14,6 +14,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var guessField: NSTextField!
     @IBOutlet weak var goButton: NSButton!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var resultLabel: NSTextField!
     
     fileprivate var answer = ""
     fileprivate var guesses = [String]()
@@ -40,6 +41,16 @@ class ViewController: NSViewController {
         guard guessString.rangeOfCharacter(from: badCharacters) == nil else { return }
         guesses.insert(guessString, at: 0)
         tableView.insertRows(at: IndexSet(integer: 0), withAnimation: .slideDown)
+        
+        let resultString = result(for: guessString)
+        if resultString.contains("4b") {
+            let alert = NSAlert()
+            alert.messageText = "You win"
+            alert.informativeText = "Congratualtions! Click OK to play again."
+            alert.runModal()
+            
+            startNewGame()
+        }
     }
     
     fileprivate func startNewGame() {
@@ -53,6 +64,8 @@ class ViewController: NSViewController {
             answer.append(String(numbers.removeLast()))
         }
         tableView.reloadData()
+        
+        resultLabel.stringValue = answer
     }
 }
 

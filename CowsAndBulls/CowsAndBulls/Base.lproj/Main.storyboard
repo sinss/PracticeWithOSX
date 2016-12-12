@@ -707,14 +707,14 @@
                                 </connections>
                             </button>
                             <scrollView wantsLayer="YES" fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VCy-W3-t0v">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="220"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="203"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <clipView key="contentView" ambiguous="YES" id="uH0-lI-Ir2">
-                                    <rect key="frame" x="1" y="0.0" width="478" height="219"/>
+                                    <rect key="frame" x="1" y="0.0" width="478" height="202"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="RBV-8a-OUm" viewBased="YES" id="ujz-C1-1Fo">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="196"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="179"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -791,7 +791,7 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="jFd-LK-jcY">
-                                    <rect key="frame" x="1" y="118" width="238" height="16"/>
+                                    <rect key="frame" x="1" y="-16" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="vk2-RS-KlF">
@@ -803,11 +803,21 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5ys-CQ-uT3">
+                                <rect key="frame" x="20" y="203" width="254" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="RWm-07-O3A">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="goButton" destination="8dA-QR-tSc" id="ogY-NA-v6F"/>
                         <outlet property="guessField" destination="DHV-WY-WJn" id="pql-vL-AYg"/>
+                        <outlet property="resultLabel" destination="5ys-CQ-uT3" id="4ZW-7t-s4V"/>
                         <outlet property="tableView" destination="ujz-C1-1Fo" id="jKg-Xe-Ekd"/>
                     </connections>
                 </viewController>
